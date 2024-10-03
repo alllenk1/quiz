@@ -1,0 +1,32 @@
+@import '@styles/declarations';
+
+.Variant {
+    display: flex;
+    align-items: flex-start;
+
+    &-Label {
+        margin-left: 20px;
+
+        @include font(16px, $weight: 400);
+    }
+
+    &-Input {
+        appearance: none;
+
+        position: relative;
+
+        min-width: 20px;
+        min-height: 20px;
+
+        background: transparent;
+        border: 1px solid $colorText;
+        border-radius: 50%;
+
+        transition: 500ms;
+
+        &:checked {
+            border-color: $colorAccent;
+            background-color: $colorAccent;
+        }
+    }
+}

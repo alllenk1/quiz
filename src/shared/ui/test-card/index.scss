@@ -1,0 +1,19 @@
+@import '@styles/declarations';
+
+.TestCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 886px;
+    min-height: 528px;
+
+    padding: 40px;
+
+    background-color: $colorBackground;
+    border-radius: $borderRadius;
+
+    &-Title {
+        @include font(24px, $weight: 700);
+    }
+}
