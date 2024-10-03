@@ -2,10 +2,12 @@
     --max-width-page-content: 1300px;
 
     --color-text: #000000;
+    --color-text-secondary: #ffffff;
     --color-background: #f7f7f7;
     --color-accent: #3300ff;
     --color-right: #e5f5e1;
     --color-wrong: #ffe0e0;
 
-    --border-radius: 20px;
+    --border-radius-big: 20px;
+    --border-radius-small: 10px;
 }

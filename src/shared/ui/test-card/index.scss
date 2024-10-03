@@ -11,7 +11,7 @@
     padding: 40px;
 
     background-color: $colorBackground;
-    border-radius: $borderRadius;
+    border-radius: $borderRadiusBig;
 
     &-Title {
         @include font(24px, $weight: 700);

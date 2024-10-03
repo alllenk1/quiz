@@ -1,0 +1,24 @@
+@import '@styles/declarations';
+
+.Button {
+    padding: 16px 30px;
+
+    cursor: pointer;
+    background-color: $colorAccent;
+    border-radius: $borderRadiusSmall;
+
+    @include font(18px, $weight: 600, $color: $colorTextSecondary);
+
+    transition: 500ms;
+
+    &:hover {
+        opacity: 80%;
+    }
+
+    &:active {
+        opacity: 80%;
+        transform: scale(0.95);
+        transform-origin: center;
+        transition: all 500ms cubic-bezier(0, -0.3, 0.5, 1.3);
+    }
+}

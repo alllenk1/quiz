@@ -54,7 +54,10 @@ export const Result = ({ answers }: Props) => {
                     </p>
                 </>
             )}
-            <AnswersList answers={answers} />
+            <AnswersList
+                answers={answers}
+                isErrors={correctAnswersCount !== answers.length}
+            />
         </div>
     );
 };
