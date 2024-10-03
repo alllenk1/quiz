@@ -1,0 +1,27 @@
+@import '@styles/declarations';
+
+.Answer {
+    max-width: 886px;
+
+    padding: 40px;
+
+    border-radius: $borderRadius;
+
+    &_right {
+        background-color: $colorRight;
+    }
+
+    &_wrong {
+        background-color: $colorWrong;
+    }
+
+    &-Title {
+        margin-bottom: 15px;
+
+        @include font(20px, $weight: 700);
+    }
+
+    &-Text {
+        @include font(16px, $weight: 400);
+    }
+}

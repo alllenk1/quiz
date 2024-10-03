@@ -1,0 +1,7 @@
+@import '@styles/declarations';
+
+.Test-Title {
+    margin-bottom: 20px;
+
+    @include font(48px, $weight: 800);
+}

@@ -5,3 +5,13 @@ export const shuffleArray = (array) => {
     }
     return array;
 };
+
+export const getCorrectForm = (count, wordForms) => {
+    if (count % 10 === 1) {
+        return `${count} ${wordForms[0]}`;
+    } else if (count % 10 >= 2 && count % 10 <= 4) {
+        return `${count} ${wordForms[1]}`;
+    } else {
+        return `${count} ${wordForms[2]}`;
+    }
+};

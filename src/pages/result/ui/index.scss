@@ -1,0 +1,15 @@
+@import '@styles/declarations';
+
+.Result {
+    &-Title {
+        margin-bottom: 20px;
+
+        @include font(48px, $weight: 800);
+    }
+
+    &-Description {
+        margin-bottom: 40px;
+
+        @include font(24px, $weight: 400, $lineHeight: 1.4);
+    }
+}

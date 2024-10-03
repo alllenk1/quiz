@@ -1,8 +1,15 @@
+export type AnswerType = {
+    id: number;
+    title: string;
+    answer: string;
+    isRight: boolean;
+};
+
 export type QuestionType = {
     id: number;
     title: string;
     variants: string[];
-    correct: string;
+    correctAnswer: string;
 };
 
 export const questions: QuestionType[] = [
@@ -15,7 +22,7 @@ export const questions: QuestionType[] = [
             'Это набор взаимосвязанных программ, осуществляющих управление компьютером и взаимодействие с пользователем',
             'Нет такого понятия, есть понятие "файловая система"',
         ],
-        correct:
+        correctAnswer:
             'Это набор взаимосвязанных программ, осуществляющих управление компьютером и взаимодействие с пользователем',
     },
     {
@@ -27,7 +34,7 @@ export const questions: QuestionType[] = [
             'Нет, Android это программа, которая ставится на операционную систему девайса. ОС на разных девайсах разные',
             'Это домашняя страничка в настройках вашего браузера',
         ],
-        correct:
+        correctAnswer:
             'Да, это такая же ОС, как и другие, просто для мобильных девайсов',
     },
     {
@@ -39,7 +46,7 @@ export const questions: QuestionType[] = [
             'Это элемент компьютера, с помощью которого обрабатывается информация, находящаяся как в собственной памяти, так и в памяти других устройств',
             'Это суммарный показатель вычислительной мощности компьютера, например 2,7 ГГц',
         ],
-        correct:
+        correctAnswer:
             'Это элемент компьютера, с помощью которого обрабатывается информация, находящаяся как в собственной памяти, так и в памяти других устройств',
     },
     {
@@ -51,7 +58,7 @@ export const questions: QuestionType[] = [
             '15 и 32 бита',
             '86 и 64 бита',
         ],
-        correct: '32 и 64 бита',
+        correctAnswer: '32 и 64 бита',
     },
     {
         id: 5,
@@ -62,7 +69,7 @@ export const questions: QuestionType[] = [
             'Чаще всего используют AMD',
             'Чаще всего используют ARM',
         ],
-        correct: 'Чаще всего используют ARM',
+        correctAnswer: 'Чаще всего используют ARM',
     },
     {
         id: 6,
@@ -73,7 +80,7 @@ export const questions: QuestionType[] = [
             'Для правильной фрагментации памяти',
             'Для дефрагментации данных',
         ],
-        correct: 'Для быстрого доступа к данным',
+        correctAnswer: 'Для быстрого доступа к данным',
     },
     {
         id: 7,
@@ -84,7 +91,7 @@ export const questions: QuestionType[] = [
             'SSD - это твердотельный накопитель без подвижных частей. Более дешевый, чем HDD. SSD работает быстрее',
             'SSD - это твердотельный накопитель без подвижных частей. Более дорогой, чем HDD. SSD работает быстрее',
         ],
-        correct:
+        correctAnswer:
             'SSD - это твердотельный накопитель без подвижных частей. Более дорогой, чем HDD. SSD работает быстрее',
     },
     {
@@ -96,13 +103,17 @@ export const questions: QuestionType[] = [
             'USB отличаются по пропускной способности (micro-USB, mini-USB, lightning и т.д.) и форме (USB 2.0, USB 3.2).',
             'USB отличаются по форме (micro-USB, mini-USB, lightning и т.д.) и пропускной способности (USB 2.0, USB 3.2)',
         ],
-        correct:
+        correctAnswer:
             'USB отличаются по форме (micro-USB, mini-USB, lightning и т.д.) и пропускной способности (USB 2.0, USB 3.2)',
     },
     {
         id: 9,
         title: 'Какой файловой системы не существует?',
         variants: ['Fat', 'NTFS', 'APFS', 'BolSFS'],
-        correct: 'BolSFS',
+        correctAnswer: 'BolSFS',
     },
 ];
+
+export const wordForms = {
+    question: ['вопрос', 'вопроса', 'вопросов'],
+};

@@ -1,18 +1,33 @@
-import { useMemo, useState } from 'react';
+import { ChangeEvent, useMemo, useState } from 'react';
 
-import { Test } from '@/pages/results';
-import { shuffleArray } from '@/shared/lib';
+import { Result, Test } from '@/pages';
+
 import { questions } from '@/shared/config';
+import type { AnswerType, QuestionType } from '@/shared/config';
+import { shuffleArray } from '@/shared/lib';
 
 import './styles/index.scss';
 
 export const App = () => {
     const [step, setStep] = useState(0);
+    const [answers, setAnswers] = useState([]);
+    const [selectedVariant, setSelectedVariant] = useState('');
 
     const shuffledQuestions = useMemo(() => shuffleArray(questions), []);
-    const question = shuffledQuestions[step];
+    const question: QuestionType = shuffledQuestions[step];
 
-    const handleCheckVariant = () => {
+    const handleCheckVariant = (event: ChangeEvent<HTMLInputElement>) => {
+        setSelectedVariant(event.target.value);
+        setAnswers((prev: AnswerType[]) => [
+            ...prev,
+            {
+                id: question.id,
+                title: question.title,
+                answer: event.target.value,
+                isRight: event.target.value === question.correctAnswer,
+            },
+        ]);
+
         setTimeout(() => {
             setStep(step + 1);
         }, 1000);
@@ -20,8 +35,14 @@ export const App = () => {
 
     return (
         <>
-            {step !== shuffledQuestions.length && (
-                <Test question={question} onCheckVariant={handleCheckVariant} />
+            {step !== shuffledQuestions.length ? (
+                <Test
+                    question={question}
+                    onCheckVariant={handleCheckVariant}
+                    selectedVariant={selectedVariant}
+                />
+            ) : (
+                <Result answers={answers} />
             )}
         </>
     );

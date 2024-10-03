@@ -1,13 +1,17 @@
-import { useMemo } from 'react';
 import { cn } from '@bem-react/classname';
+import { useMemo } from 'react';
 
-import { Variant } from '@/shared/ui';
 import { shuffleArray } from '@/shared/lib';
+import { Variant } from '@/shared/ui';
 
-import { Props } from './types.ts';
 import './index.scss';
+import { Props } from './types.ts';
 
-export const TestCard = ({ question, onCheckVariant }: Props) => {
+export const TestCard = ({
+    question,
+    onCheckVariant,
+    selectedVariant,
+}: Props) => {
     const cnTestCard = cn('TestCard');
 
     const shuffledVariants = useMemo(
@@ -23,6 +27,7 @@ export const TestCard = ({ question, onCheckVariant }: Props) => {
                     key={index}
                     id={`variant-${index}`}
                     text={variant}
+                    isChecked={selectedVariant === variant}
                     onCheckVariant={onCheckVariant}
                 />
             ))}

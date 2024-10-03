@@ -1,32 +1,21 @@
-import { useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
-import { Props } from './types.ts';
 import './index.scss';
+import { Props } from './types.ts';
 
-export const Variant = ({ id, text, onCheckVariant }: Props) => {
+export const Variant = ({ id, text, onCheckVariant, isChecked }: Props) => {
     const cnVariant = cn('Variant');
 
-    const [isChecked, setChecked] = useState(false);
-
-    useEffect(() => {
-        setChecked(false);
-    }, [text]);
-
-    const handleClick = () => {
-        setChecked(true);
-        onCheckVariant();
-    };
-
     return (
-        <div className={cnVariant('')} onClick={handleClick}>
+        <div className={cnVariant('')}>
             <input
                 className={cnVariant('Input')}
-                id={id}
                 type="radio"
+                id={id}
                 name="variant"
+                value={text}
                 checked={isChecked}
-                readOnly
+                onChange={onCheckVariant}
             />
             <label className={cnVariant('Label')} htmlFor={id}>
                 {text}

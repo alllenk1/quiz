@@ -22,8 +22,6 @@
         border: 1px solid $colorText;
         border-radius: 50%;
 
-        transition: 500ms;
-
         &:checked {
             border-color: $colorAccent;
             background-color: $colorAccent;
