@@ -1,0 +1,9 @@
+:root {
+    --max-width-page-content: 1300px;
+
+    --color-text: #000000;
+    --color-background: #f7f7f7;
+    --color-accent: #3300ff;
+    --color-success: #e5f5e1;
+    --color-fail: #ffe0e0;
+}

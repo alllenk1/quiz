@@ -1,0 +1,12 @@
+@import '@styles/declarations';
+
+body {
+    margin: 20px;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: $colorText;
+}
+
+#root {
+    min-height: 100vh;
+}
