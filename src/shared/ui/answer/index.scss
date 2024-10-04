@@ -1,8 +1,6 @@
 @import '@styles/declarations';
 
 .Answer {
-    max-width: 886px;
-
     padding: 40px;
 
     border-radius: $borderRadiusBig;
@@ -22,6 +20,6 @@
     }
 
     &-Text {
-        @include font(16px, $weight: 400);
+        @include font(16px, $weight: 400, $lineHeight: 1.4);
     }
 }

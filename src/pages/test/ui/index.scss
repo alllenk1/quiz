@@ -1,7 +1,14 @@
 @import '@styles/declarations';
 
-.Test-Title {
-    margin-bottom: 20px;
+.Test {
+    max-width: 886px;
 
-    @include font(48px, $weight: 800);
+    margin: 0 auto;
+
+    &-Title {
+        margin-bottom: 20px;
+
+        hyphens: auto;
+        @include font(48px, $weight: 800);
+    }
 }

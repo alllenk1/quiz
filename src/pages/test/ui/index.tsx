@@ -1,11 +1,17 @@
 import { cn } from '@bem-react/classname';
 
-import { TestCard } from '@/shared/ui';
+import { ProgressBar, TestCard } from '@/shared/ui';
 
 import './index.scss';
 import { Props } from './types.ts';
 
-export const Test = ({ question, selectedVariant, onCheckVariant }: Props) => {
+export const Test = ({
+    question,
+    questionIndex,
+    questionsCount,
+    selectedVariant,
+    onCheckVariant,
+}: Props) => {
     const cnTest = cn('Test');
 
     return (
@@ -16,6 +22,7 @@ export const Test = ({ question, selectedVariant, onCheckVariant }: Props) => {
                 selectedVariant={selectedVariant}
                 onCheckVariant={onCheckVariant}
             />
+            <ProgressBar total={questionsCount} progress={questionIndex} />
         </div>
     );
 };

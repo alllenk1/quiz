@@ -1,0 +1,52 @@
+@import '@styles/declarations';
+
+.ProgressBar {
+    position: relative;
+
+    &-Container {
+        width: 100%;
+        height: 12px;
+
+        margin-top: 43px;
+
+        background-color: $colorBackground;
+        border-radius: $borderRadiusSmall;
+
+        overflow: hidden;
+    }
+
+    &-Progress {
+        height: inherit;
+
+        background-color: $colorAccent;
+        border-radius: $borderRadiusSmall;
+        transition: width 500ms ease;
+    }
+
+    &-Start,
+    &-End,
+    &-Current {
+        position: absolute;
+
+        @include font(16px, $weight: 600);
+    }
+
+    &-Start,
+    &-End {
+        top: -23px;
+    }
+
+    &-Current {
+        top: 13px;
+
+        transition: 500ms;
+    }
+
+    &-Start {
+        left: 0;
+    }
+
+    &-End {
+        right: 0;
+    }
+}

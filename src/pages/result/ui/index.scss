@@ -1,9 +1,14 @@
 @import '@styles/declarations';
 
 .Result {
+    max-width: 886px;
+
+    margin: 0 auto;
+
     &-Title {
         margin-bottom: 20px;
 
+        hyphens: auto;
         @include font(48px, $weight: 800);
     }
 

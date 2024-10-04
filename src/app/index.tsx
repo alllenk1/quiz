@@ -38,6 +38,8 @@ export const App = () => {
             {step !== shuffledQuestions.length ? (
                 <Test
                     question={question}
+                    questionIndex={step}
+                    questionsCount={shuffledQuestions.length}
                     onCheckVariant={handleCheckVariant}
                     selectedVariant={selectedVariant}
                 />

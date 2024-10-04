@@ -15,3 +15,7 @@ export const getCorrectForm = (count, wordForms) => {
         return `${count} ${wordForms[2]}`;
     }
 };
+
+export const getPercent = (total, currentProgress) => {
+    return Math.round((currentProgress * 100) / total);
+};

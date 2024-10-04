@@ -7,7 +7,7 @@
     background-color: $colorAccent;
     border-radius: $borderRadiusSmall;
 
-    @include font(18px, $weight: 600, $color: $colorTextSecondary);
+    @include font(18px, $weight: 700, $color: $colorTextSecondary);
 
     transition: 500ms;
 
