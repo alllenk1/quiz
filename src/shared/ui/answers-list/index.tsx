@@ -11,11 +11,11 @@ export const AnswersList = ({ answers, isErrors }: Props) => {
     return (
         <div className={cnAnswersList('')}>
             {answers.map((answer) => (
-                <Answer answer={answer} />
+                <Answer key={answer.id} answer={answer} />
             ))}
 
             {isErrors && (
-                <a className={cnAnswersList('Button')} href="/quiz/">
+                <a href="/" className={cnAnswersList('Button')}>
                     <Button text="Пройти еще раз" />
                 </a>
             )}

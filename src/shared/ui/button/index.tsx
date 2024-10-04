@@ -3,8 +3,12 @@ import { cn } from '@bem-react/classname';
 import './index.scss';
 import { Props } from './types.ts';
 
-export const Button = ({ text }: Props) => {
+export const Button = ({ text, onClick }: Props) => {
     const cnButton = cn('Button');
 
-    return <button className={cnButton('')}>{text}</button>;
+    return (
+        <button className={cnButton('')} onClick={onClick}>
+            {text}
+        </button>
+    );
 };

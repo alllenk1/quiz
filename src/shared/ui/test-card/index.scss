@@ -1,6 +1,6 @@
 @import '@styles/declarations';
 
-.TestCard-Container {
+.TestCard {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -11,8 +11,8 @@
 
     background-color: $colorBackground;
     border-radius: $borderRadiusBig;
-}
 
-.TestCard-Title {
-    @include font(24px, $weight: 700);
+    &-Title {
+        @include font(24px, $weight: 700);
+    }
 }

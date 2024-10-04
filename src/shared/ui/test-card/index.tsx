@@ -21,21 +21,17 @@ export const TestCard = ({
 
     return (
         <form className={cnTestCard('')}>
-            <fieldset className={cnTestCard('Container')}>
-                <legend className={cnTestCard('Title')}>
-                    {question.title}
-                </legend>
-                {shuffledVariants.map((variant: string, index: number) => (
-                    <Variant
-                        key={index}
-                        id={`variant-${index}`}
-                        text={variant}
-                        isChecked={selectedVariant === variant}
-                        isDisabled={!!selectedVariant}
-                        onCheckVariant={onCheckVariant}
-                    />
-                ))}
-            </fieldset>
+            <h2 className={cnTestCard('Title')}>{question.title}</h2>
+            {shuffledVariants.map((variant: string, index: number) => (
+                <Variant
+                    key={index}
+                    id={`variant-${index}`}
+                    text={variant}
+                    isChecked={selectedVariant === variant}
+                    isDisabled={!!selectedVariant}
+                    onCheckVariant={onCheckVariant}
+                />
+            ))}
         </form>
     );
 };

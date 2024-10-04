@@ -39,13 +39,13 @@ export const App = () => {
 
     return (
         <>
-            {step !== shuffledQuestions.length ? (
+            {step < shuffledQuestions.length ? (
                 <Test
                     question={question}
                     questionIndex={step}
                     questionsCount={shuffledQuestions.length}
-                    onCheckVariant={handleCheckVariant}
                     selectedVariant={selectedVariant}
+                    onCheckVariant={handleCheckVariant}
                 />
             ) : (
                 <Result answers={answers} />
