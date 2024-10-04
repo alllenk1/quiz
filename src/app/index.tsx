@@ -1,4 +1,4 @@
-import { ChangeEvent, useMemo, useState } from 'react';
+import { type ChangeEvent, useEffect, useMemo, useState } from 'react';
 
 import { Result, Test } from '@/pages';
 
@@ -15,6 +15,10 @@ export const App = () => {
 
     const shuffledQuestions = useMemo(() => shuffleArray(questions), []);
     const question: QuestionType = shuffledQuestions[step];
+
+    useEffect(() => {
+        setSelectedVariant('');
+    }, [step]);
 
     const handleCheckVariant = (event: ChangeEvent<HTMLInputElement>) => {
         setSelectedVariant(event.target.value);

@@ -1,6 +1,6 @@
-import { ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 
-import { QuestionType } from '@/shared/config';
+import type { QuestionType } from '@/shared/config';
 
 export type Props = {
     question: QuestionType;

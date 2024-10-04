@@ -9,8 +9,8 @@ import { Props } from './types.ts';
 
 export const TestCard = ({
     question,
-    onCheckVariant,
     selectedVariant,
+    onCheckVariant,
 }: Props) => {
     const cnTestCard = cn('TestCard');
 
@@ -20,17 +20,22 @@ export const TestCard = ({
     );
 
     return (
-        <fieldset className={cnTestCard('')}>
-            <legend className={cnTestCard('Title')}>{question.title}</legend>
-            {shuffledVariants.map((variant, index) => (
-                <Variant
-                    key={index}
-                    id={`variant-${index}`}
-                    text={variant}
-                    isChecked={selectedVariant === variant}
-                    onCheckVariant={onCheckVariant}
-                />
-            ))}
-        </fieldset>
+        <form className={cnTestCard('')}>
+            <fieldset className={cnTestCard('Container')}>
+                <legend className={cnTestCard('Title')}>
+                    {question.title}
+                </legend>
+                {shuffledVariants.map((variant, index) => (
+                    <Variant
+                        key={index}
+                        id={`variant-${index}`}
+                        text={variant}
+                        isChecked={selectedVariant === variant}
+                        isDisabled={!!selectedVariant}
+                        onCheckVariant={onCheckVariant}
+                    />
+                ))}
+            </fieldset>
+        </form>
     );
 };

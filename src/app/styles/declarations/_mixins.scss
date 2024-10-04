@@ -1,11 +1,5 @@
 @import 'variables';
 
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 @mixin font($size: null, $color: null, $weight: null, $lineHeight: null) {
     @if ($size) {
         font-size: $size;

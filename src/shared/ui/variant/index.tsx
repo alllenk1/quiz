@@ -3,17 +3,24 @@ import { cn } from '@bem-react/classname';
 import './index.scss';
 import { Props } from './types.ts';
 
-export const Variant = ({ id, text, onCheckVariant, isChecked }: Props) => {
+export const Variant = ({
+    id,
+    text,
+    isChecked,
+    isDisabled,
+    onCheckVariant,
+}: Props) => {
     const cnVariant = cn('Variant');
 
     return (
         <div className={cnVariant('')}>
             <input
                 className={cnVariant('Input')}
-                type="radio"
                 id={id}
+                type="radio"
                 name="variant"
                 value={text}
+                disabled={isDisabled}
                 checked={isChecked}
                 onChange={onCheckVariant}
             />

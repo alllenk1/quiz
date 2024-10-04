@@ -1,4 +1,4 @@
-import { AnswerType } from '@/shared/config';
+import type { AnswerType } from '@/shared/config';
 
 export type Props = {
     answers: AnswerType[];
