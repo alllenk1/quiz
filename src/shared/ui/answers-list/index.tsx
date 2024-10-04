@@ -15,7 +15,7 @@ export const AnswersList = ({ answers, isErrors }: Props) => {
             ))}
 
             {isErrors && (
-                <a className={cnAnswersList('Button')} href="/">
+                <a className={cnAnswersList('Button')} href="/quiz/">
                     <Button text="Пройти еще раз" />
                 </a>
             )}
