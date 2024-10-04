@@ -6,11 +6,10 @@
     "homepage": "https://alllenk1.github.io/quiz",
     "scripts": {
         "dev": "vite",
-        "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "build": "vite build",
+        "serve": "vite preview"
     },
     "dependencies": {
         "react": "^18.3.1",

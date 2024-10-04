@@ -1,8 +1,9 @@
 import { cn } from '@bem-react/classname';
 
+import { AnswersList } from '@/entities/answers';
+
 import { wordForms } from '@/shared/config';
 import { getCorrectForm } from '@/shared/lib';
-import { AnswersList } from '@/shared/ui';
 
 import './index.scss';
 import { Props } from './types.ts';

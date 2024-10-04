@@ -1,6 +1,8 @@
 import { cn } from '@bem-react/classname';
 
-import { ProgressBar, TestCard } from '@/shared/ui';
+import { TestCard } from '@/entities/test';
+
+import { ProgressBar } from '@/shared/ui';
 
 import './index.scss';
 import { Props } from './types.ts';
