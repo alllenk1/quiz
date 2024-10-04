@@ -10,7 +10,7 @@ import './styles/index.scss';
 
 export const App = () => {
     const [step, setStep] = useState(0);
-    const [answers, setAnswers] = useState([]);
+    const [answers, setAnswers] = useState<AnswerType[]>([]);
     const [selectedVariant, setSelectedVariant] = useState('');
 
     const shuffledQuestions = useMemo(() => shuffleArray(questions), []);
@@ -33,7 +33,7 @@ export const App = () => {
         ]);
 
         setTimeout(() => {
-            setStep(step + 1);
+            setStep((prevStep) => prevStep + 1);
         }, 1000);
     };
 

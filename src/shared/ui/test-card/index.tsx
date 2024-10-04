@@ -25,7 +25,7 @@ export const TestCard = ({
                 <legend className={cnTestCard('Title')}>
                     {question.title}
                 </legend>
-                {shuffledVariants.map((variant, index) => (
+                {shuffledVariants.map((variant: string, index: number) => (
                     <Variant
                         key={index}
                         id={`variant-${index}`}
