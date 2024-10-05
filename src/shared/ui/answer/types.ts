@@ -1,5 +1,5 @@
-import type { AnswerType } from '@/shared/config';
+import { Answer } from '@/entities/answer/types.ts';
 
 export type Props = {
-    answer: AnswerType;
+    answer: Answer;
 };

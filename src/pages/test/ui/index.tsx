@@ -5,7 +5,7 @@ import { TestCard } from '@/entities/test';
 import { ProgressBar } from '@/shared/ui';
 
 import './index.scss';
-import { Props } from './types.ts';
+import type { Props } from './types.ts';
 
 export const Test = ({
     question,

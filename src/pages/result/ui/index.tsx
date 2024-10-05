@@ -1,12 +1,12 @@
 import { cn } from '@bem-react/classname';
 
-import { AnswersList } from '@/entities/answers';
+import { AnswersList } from '@/entities/answer';
 
 import { wordForms } from '@/shared/config';
 import { getCorrectForm } from '@/shared/lib';
 
 import './index.scss';
-import { Props } from './types.ts';
+import type { Props } from './types.ts';
 
 export const Result = ({ answers }: Props) => {
     const cnResult = cn('Result');

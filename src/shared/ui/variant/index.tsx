@@ -1,7 +1,7 @@
 import { cn } from '@bem-react/classname';
 
 import './index.scss';
-import { Props } from './types.ts';
+import type { Props } from './types.ts';
 
 export const Variant = ({
     id,

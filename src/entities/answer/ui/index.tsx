@@ -2,8 +2,8 @@ import { cn } from '@bem-react/classname';
 
 import { Answer, Button } from '@/shared/ui';
 
+import type { Props } from '../types.ts';
 import './index.scss';
-import { Props } from './types.ts';
 
 export const AnswersList = ({ answers, isErrors }: Props) => {
     const cnAnswersList = cn('AnswersList');

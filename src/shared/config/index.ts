@@ -1,18 +1,6 @@
-export type AnswerType = {
-    id: number;
-    title: string;
-    answer: string;
-    isRight: boolean;
-};
+import { Question } from '@/entities/test';
 
-export type QuestionType = {
-    id: number;
-    title: string;
-    variants: string[];
-    correctAnswer: string;
-};
-
-export const questions: QuestionType[] = [
+export const questions: Question[] = [
     {
         id: 1,
         title: 'Что такое операционная система?',

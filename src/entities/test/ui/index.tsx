@@ -4,8 +4,8 @@ import { useMemo } from 'react';
 import { shuffleArray } from '@/shared/lib';
 import { Variant } from '@/shared/ui';
 
+import type { Props } from '../types.ts';
 import './index.scss';
-import { Props } from './types.ts';
 
 export const TestCard = ({
     question,

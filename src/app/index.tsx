@@ -1,20 +1,23 @@
 import { type ChangeEvent, useEffect, useMemo, useState } from 'react';
 
-import { Result, Test } from '@/pages';
+import { Result } from '@/pages/result';
+import { Test } from '@/pages/test';
+
+import type { Answer } from '@/entities/answer';
+import type { Question } from '@/entities/test';
 
 import { questions } from '@/shared/config';
-import type { AnswerType, QuestionType } from '@/shared/config';
 import { shuffleArray } from '@/shared/lib';
 
 import './styles/index.scss';
 
 export const App = () => {
     const [step, setStep] = useState(0);
-    const [answers, setAnswers] = useState<AnswerType[]>([]);
+    const [answers, setAnswers] = useState<Answer[]>([]);
     const [selectedVariant, setSelectedVariant] = useState('');
 
     const shuffledQuestions = useMemo(() => shuffleArray(questions), []);
-    const question: QuestionType = shuffledQuestions[step];
+    const question: Question = shuffledQuestions[step];
 
     useEffect(() => {
         setSelectedVariant('');
@@ -22,7 +25,7 @@ export const App = () => {
 
     const handleCheckVariant = (event: ChangeEvent<HTMLInputElement>) => {
         setSelectedVariant(event.target.value);
-        setAnswers((prev: AnswerType[]) => [
+        setAnswers((prev: Answer[]) => [
             ...prev,
             {
                 id: question.id,

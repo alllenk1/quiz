@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 import { getPercent } from '@/shared/lib';
 
 import './index.scss';
-import { Props } from './types.ts';
+import type { Props } from './types.ts';
 
 export const ProgressBar = ({ total, progress }: Props) => {
     const cnProgressBar = cn('ProgressBar');

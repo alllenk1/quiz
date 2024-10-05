@@ -1,9 +1,9 @@
 import type { ChangeEvent } from 'react';
 
-import type { QuestionType } from '@/shared/config';
+import { Question } from '@/entities/test';
 
 export type Props = {
-    question: QuestionType;
+    question: Question;
     questionIndex: number;
     questionsCount: number;
     selectedVariant: string;
